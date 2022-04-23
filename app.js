@@ -10,7 +10,7 @@ const levels = {
 };
 
 // To change level
-const currentLevel = levels.hard;
+let currentLevel = levels.easy;
 
 let time = currentLevel;
 let score = 0;
@@ -24,6 +24,8 @@ const timeDisplay = document.querySelector("#time");
 const message = document.querySelector("#message");
 const seconds = document.querySelector("#seconds");
 const skipBtn = document.querySelector(".btn");
+const selection = document.querySelector("#list");
+const selectedValue = document.querySelector("#list").value;
 
 const words = [
   "remodelling",
@@ -69,6 +71,7 @@ const words = [
 // Initialize Game
 
 function init() {
+  selection.addEventListener("change", changeLevel);
   // Show seconds
   seconds.innerHTML = currentLevel;
   // Load word from array
@@ -122,6 +125,13 @@ function showWord(words) {
 
   // OUtput random word
   currentWord.innerHTML = words[randIndex];
+}
+
+function changeLevel() {
+  // showWord(words);
+  if (selectedValue == "Medium") {
+    currentWord.innerHTML = selectedValue;
+  }
 }
 
 // Run countdown timer
