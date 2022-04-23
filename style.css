@@ -1,0 +1,12 @@
+.txt-type > .txt {
+  border-right: 0.2rem solid #222;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+#message {
+  transition: all 0.3s ease-in-out;
+}
