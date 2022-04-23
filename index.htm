@@ -15,22 +15,32 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./skeleton.css">
 
     <title>WORD BEATER</title>
     <style>
       .txt-type > .txt {
         border-right: 0.2rem solid #222;
       }
+
+      body {
+        font-family:"Poppins", sans-serif;
+        transition: all .3s ease-in-out;
+      }
+
+      #message {
+        transition: all .3s ease-in-out;
+      }
     </style>
   </head>
   <body class="bg-dark text-white">
     <header class="bg-secondary p-3 mb-5 text-center">
       <h1>
-        Word
+        
         <span
           class="txt-type"
           data-wait="3000"
-          data-words='["Beater","Speedtype","By Josh","Game"]'
+          data-words='["Word Beater","By Joshua Fransix"]'
         ></span>
       </h1>
     </header>

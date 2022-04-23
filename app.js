@@ -10,7 +10,7 @@ const levels = {
 };
 
 // To change level
-const currentLevel = levels.easy;
+const currentLevel = levels.hard;
 
 let time = currentLevel;
 let score = 0;
@@ -105,6 +105,7 @@ function matchWords() {
   if (wordInput.value === currentWord.innerHTML) {
     message.innerHTML = "Correct";
     message.style.color = "green";
+    message.style.transition = "all 0.3s ease-in-out";
     skipBtn.style.display = "block";
 
     return true;
