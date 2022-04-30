@@ -13,7 +13,11 @@ body {
 
 select,
 option {
+  border-radius: 5px;
+  padding: 0.3rem;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 #current-word {

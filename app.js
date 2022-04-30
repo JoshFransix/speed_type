@@ -133,6 +133,7 @@ function changeLevel() {
     if (matchWords()) {
       startMatch();
     }
+
     currentLevel = levels.easy;
     time = currentLevel;
     seconds.innerHTML = currentLevel;
