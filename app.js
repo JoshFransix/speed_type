@@ -123,14 +123,40 @@ function showWord(words) {
   // Generate random index
   const randIndex = Math.floor(Math.random() * words.length);
 
-  // OUtput random word
+  // Output random word
   currentWord.innerHTML = words[randIndex];
 }
 
 function changeLevel() {
   // showWord(words);
-  if (selectedValue == "Medium") {
-    currentWord.innerHTML = selectedValue;
+  if (selection.options[selection.selectedIndex].text === "Easy") {
+    if (matchWords()) {
+      startMatch();
+    }
+    currentLevel = levels.easy;
+    time = currentLevel;
+    seconds.innerHTML = currentLevel;
+    showWord(words);
+
+    // currentWord.innerHTML = "Easypeezy";
+  }
+  if (selection.options[selection.selectedIndex].text === "Medium") {
+    if (matchWords()) {
+      startMatch();
+    }
+    currentLevel = levels.medium;
+    time = currentLevel;
+    seconds.innerHTML = currentLevel;
+    showWord(words);
+  }
+  if (selection.options[selection.selectedIndex].text === "Hard") {
+    if (matchWords()) {
+      startMatch();
+    }
+    currentLevel = levels.hard;
+    time = currentLevel;
+    seconds.innerHTML = currentLevel;
+    showWord(words);
   }
 }
 
